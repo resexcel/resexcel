@@ -30,7 +30,7 @@
         import { getFirestore, collection, onSnapshot, doc, setDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         // =========================================================================
-        // CONFIGURATION FIREBASE
+        // CONFIGURATION FIREBASE (Vos clés)
         // =========================================================================
         const USER_FIREBASE_CONFIG = {
             apiKey: "AIzaSyDEP3rD8PvnSTFw_xAGuFT6CL4a0w-4rHw",
@@ -41,7 +41,7 @@
             appId: "1:25610641116:web:c46651d300d6d39cefde19"
         };
 
-        // Initialisation de Firebase (Hybride: Éditeur de test + GitHub)
+        // Initialisation de Firebase
         const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : USER_FIREBASE_CONFIG;
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
@@ -122,6 +122,7 @@
             // ÉTATS FIREBASE
             const [user, setUser] = useState(null);
             const [isLoading, setIsLoading] = useState(true);
+            const [firebaseError, setFirebaseError] = useState(null); // Nouvel état pour tracer les erreurs
 
             // ÉTATS DONNÉES (vides par défaut, Firebase s'en occupe)
             const [contacts, setContacts] = useState([]);
@@ -155,6 +156,7 @@
                         }
                     } catch (error) {
                         console.error("Erreur de connexion Firebase:", error);
+                        setFirebaseError("L'authentification Firebase a échoué. Vérifiez que la méthode 'Anonyme' est bien activée.");
                         setIsLoading(false);
                     }
                 };
@@ -178,20 +180,24 @@
                 const unsubContacts = onSnapshot(contactsCol, (snapshot) => {
                     const data = snapshot.docs.map(doc => ({ ...doc.data(), firebaseId: doc.id }));
                     
-                    // Si la base est vide (1ère ouverture absolue), on injecte les 24 membres
+                    // Injection automatique à la première ouverture si vide
                     if (data.length === 0 && !window.hasSeededFirebase) {
                         window.hasSeededFirebase = true;
-                        initialContacts.forEach(async (c) => {
-                            try {
-                                await setDoc(doc(contactsCol, c.id.toString()), c);
-                            } catch(e) { console.error("Erreur injection:", e); }
-                        });
+                        
+                        // Injection sécurisée
+                        Promise.all(initialContacts.map(c => setDoc(doc(contactsCol, c.id.toString()), c)))
+                            .then(() => console.log("Membres injectés avec succès !"))
+                            .catch(err => {
+                                console.error("Erreur d'écriture :", err);
+                                setFirebaseError("Firebase bloque l'écriture. Allez dans l'onglet 'Règles' (Rules) de Firestore pour les mettre à jour.");
+                            });
                     } else {
                         setContacts(data.sort((a, b) => a.name.localeCompare(b.name)));
                         setIsLoading(false);
                     }
                 }, (error) => {
-                    console.error("Impossible de lire Firestore. Vos règles de sécurité sont-elles bien configurées ?", error);
+                    console.error("Impossible de lire Firestore:", error);
+                    setFirebaseError("Firebase bloque la lecture. Allez dans l'onglet 'Règles' (Rules) de Firestore pour les mettre à jour.");
                     setIsLoading(false);
                 });
 
@@ -199,7 +205,7 @@
                 const unsubCA = onSnapshot(caCol, (snapshot) => {
                     const data = snapshot.docs.map(doc => ({ ...doc.data(), firebaseId: doc.id }));
                     setDeclarationsCA(data.sort((a, b) => b.id - a.id));
-                });
+                }, (err) => console.error("Erreur lecture CA:", err));
 
                 return () => { unsubContacts(); unsubCA(); };
             }, [user]);
@@ -290,7 +296,7 @@
                 }
             };
 
-            // Écran de chargement pendant que Firebase se connecte
+            // Écran de chargement
             if (isLoading) {
                 return (
                     <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50">
@@ -303,6 +309,13 @@
             return (
                 <div className="w-full min-h-screen bg-slate-50 font-sans text-slate-800 pb-12 relative z-0 box-border">
                     
+                    {firebaseError && (
+                        <div className="bg-red-500 text-white p-4 text-center font-bold">
+                            <i className="fa-solid fa-triangle-exclamation mr-2"></i>
+                            Erreur Firebase : {firebaseError}
+                        </div>
+                    )}
+
                     <header className="bg-white shadow-sm sticky top-0 z-10 w-full">
                         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:h-20 flex items-center justify-between">
                             <div className="flex items-center space-x-3">
