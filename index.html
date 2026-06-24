@@ -50,30 +50,30 @@
 
         // --- DONNÉES INITIALES (Injectées une seule fois) ---
         const initialContacts = [
-            { id: 1, company: "AMAFLORE COACHING", name: "Florence HOURDIN", phone: "06 95 58 56 36", email: "florence.hourdin@amaflore.fr", activity: "Coaching professionnel et consultante en bilan de compétence", website: "https://www.amaflore.fr" },
-            { id: 2, company: "ZOAN", name: "Betty JALLET", phone: "06 89 06 07 58", email: "betty@zoan.fr", activity: "Agence de communication", website: "www.zoan.fr" },
-            { id: 3, company: "H DE B MINCEUR-SARL BRIANTESSENCE", name: "Marina MORVAN", phone: "06 83 07 49 37", email: "m.morvan@hdeb-minceur.fr", activity: "Amincissement et Bien-être", website: "https://hdeb-minceur.fr" },
-            { id: 4, company: "EFFIGESTION PRO", name: "Caroline FRESNAIS", phone: "06 59 78 10 56", email: "cfresnais.assistante@gmail.com", activity: "Accompagnement dirigeants TPE-PME - Gestion administrative et financière", website: "https://linktr.ee/effigestionpro" },
-            { id: 5, company: "SPORTMADNESS", name: "François GAUDICHE", phone: "06 14 15 58 76", email: "fgaudiche@hotmail.fr", activity: "Événementiel sportif", website: "www.sportmadness.club/fr" },
-            { id: 6, company: "ACTIF ATLANTIQUE PATRIMOINE", name: "Jackie LEROUX", phone: "07 60 00 18 07", email: "jackie@aap-patrimoine.com", activity: "Gestion Patrimoniale et Gestion Privée", website: "www.aap-patrimoine.com" },
-            { id: 7, company: "EQUIP'MAN", name: "Elodie LEBRETON", phone: "07 66 97 40 61", email: "elodie.lebreton@equipman.fr", activity: "EPI - Vêtements professionnels", website: "www.equipman.fr" },
-            { id: 8, company: "BN AGENCEMENT", name: "Brice NISTAL", phone: "07 61 40 46 83", email: "brice@bnagencement.com", activity: "Menuisier Agenceur - Cuisine", website: "https://www.facebook.com/profile.php?id=61568381294390" },
-            { id: 9, company: "Abeille Assurances", name: "Yann BENOIST", phone: "07 77 25 26 12", email: "y-benoist@abeille-assurances.com", activity: "Assurances Pro et Particuliers", website: "https://agences.abeille-assurances.fr/chateaubriant/" },
-            { id: 10, company: "DT SÉCURITÉ PRIVÉE", name: "Edouard TRIOULAIRE", phone: "06 34 92 67 91", email: "el.trioulaire@dtsecuriteprivee.fr", activity: "Sécurité Privée", website: "www.dtsecuriteprivee.fr" },
-            { id: 11, company: "PROPRIÉTÉS PRIVÉES", name: "Georges Henri NOMARI", phone: "06 60 22 34 99", email: "gh.nomari@proprietes-privees.com", activity: "Expert et Conseiller en Immobilier territoire Châteaubriant Derval", website: "https://www.proprietes-privees.com/negociateur/georges-henri.nomari" },
-            { id: 12, company: "STÉ AUNETTE", name: "Mickael AUNETTE", phone: "06 89 94 12 46", email: "Mickaelaunette@gmail.com", activity: "Construction métallique", website: "" },
-            { id: 13, company: "SO CO RE VE / COMERA CUISINES", name: "Kalita Rebours", phone: "06 71 30 39 42", email: "kalita.rebours@wanadoo.fr", activity: "Maître d’œuvre / Agencement intérieur", website: "www.SOCOREVE-chateaubriant.com" },
-            { id: 14, company: "STE AUNETTE", name: "Laura LEMASSON", phone: "06 87 01 09 81", email: "laura@aunette.com", activity: "Serrurerie, metallerie, cloture, portail, porte de garage", website: "" },
-            { id: 15, company: "CEB COURTAGE", name: "Eric BENOIST", phone: "06 20 04 18 66", email: "e-benoist@abeille-assurances.com", activity: "Courtage Assurances", website: "" },
-            { id: 16, company: "LA DECO’TECH", name: "Jérémy MARSAC", phone: "06 47 96 33 71", email: "sarlcojelouti@gmail.com", activity: "Peinture décoration-ravalement-pose de sol", website: "https://www.ladecotech.com/" },
-            { id: 17, company: "PEUGEOT GEMY CHÂTEAUBRIANT", name: "Gwenaelle BRUNEAU", phone: "07 77 44 32 12", email: "gbruneau@gemy.fr", activity: "Commerciale auprès des professionnels", website: "" },
-            { id: 18, company: "RÉSEAU ELISTA", name: "Isabelle LEDIG", phone: "06 75 41 30 65", email: "i.ledig@elistaconseils.com", activity: "Courtière prêts immobiliers", website: "" },
-            { id: 19, company: "MARIE PHOTOGRAPHE", name: "Marie GUÉRIN", phone: "06 30 68 67 79 / 02 40 81 05 70", email: "contact@mariephotographe.fr", activity: "Photographie, service et commerce", website: "www.mariephotographe.fr" },
-            { id: 20, company: "SARL CHARNOLÉ SINGER", name: "Robin SINGER", phone: "06 32 17 77 65", email: "cjs@huissier-justice.fr", activity: "Commissaire de justice (Huissier)", website: "www.etude-cjs.com" },
-            { id: 21, company: "MENUISERIE SAVOURÉ", name: "Sabrina SAVOURÉ", phone: "02 99 44 91 21 / 06 07 38 42 52", email: "menuiseriesavoure.contact@gmail.com", activity: "Menuiserie et isolation, en rénovation et neuf", website: "www.menuiseriesavoure.com" },
-            { id: 22, company: "BOLLORE MAINGUET", name: "Séverine MESLIN", phone: "06 74 95 29 13", email: "s.meslin@bollore-mainguet.fr", activity: "Expertise comptable", website: "www.bollore-mainguet.com" },
-            { id: 23, company: "PROSPACTIVE", name: "Xavier VOZELLE", phone: "07 44 92 37 60", email: "xavier.vozelle@prospactive.com", activity: "Développement commercial externalisé", website: "http://www.prospactive.com" },
-            { id: 24, company: "LE PETIT DIAGNOSTIQUEUR", name: "Ludovic COLIN", phone: "06 71 12 57 05", email: "contact@lepetitdiagnostiqueur.fr", activity: "Diagnostic immobilier", website: "https://www.lepetitdiagnostiqueur.fr/" }
+            { id: 1, company: "AMAFLORE COACHING", name: "Florence HOURDIN", phone: "06 95 58 56 36", email: "florence.hourdin@amaflore.fr", activity: "Coaching professionnel et consultante en bilan de compétence", website: "https://www.amaflore.fr", sector: "Bien-être & Coaching", avatarUrl: "", logoUrl: "" },
+            { id: 2, company: "ZOAN", name: "Betty JALLET", phone: "06 89 06 07 58", email: "betty@zoan.fr", activity: "Agence de communication", website: "www.zoan.fr", sector: "Communication", avatarUrl: "", logoUrl: "" },
+            { id: 3, company: "H DE B MINCEUR-SARL BRIANTESSENCE", name: "Marina MORVAN", phone: "06 83 07 49 37", email: "m.morvan@hdeb-minceur.fr", activity: "Amincissement et Bien-être", website: "https://hdeb-minceur.fr", sector: "Bien-être & Coaching", avatarUrl: "", logoUrl: "" },
+            { id: 4, company: "EFFIGESTION PRO", name: "Caroline FRESNAIS", phone: "06 59 78 10 56", email: "cfresnais.assistante@gmail.com", activity: "Accompagnement dirigeants TPE-PME - Gestion administrative et financière", website: "https://linktr.ee/effigestionpro", sector: "Services aux entreprises", avatarUrl: "", logoUrl: "" },
+            { id: 5, company: "SPORTMADNESS", name: "François GAUDICHE", phone: "06 14 15 58 76", email: "fgaudiche@hotmail.fr", activity: "Événementiel sportif", website: "www.sportmadness.club/fr", sector: "Loisirs & Sport", avatarUrl: "", logoUrl: "" },
+            { id: 6, company: "ACTIF ATLANTIQUE PATRIMOINE", name: "Jackie LEROUX", phone: "07 60 00 18 07", email: "jackie@aap-patrimoine.com", activity: "Gestion Patrimoniale et Gestion Privée", website: "www.aap-patrimoine.com", sector: "Finance & Assurance", avatarUrl: "", logoUrl: "" },
+            { id: 7, company: "EQUIP'MAN", name: "Elodie LEBRETON", phone: "07 66 97 40 61", email: "elodie.lebreton@equipman.fr", activity: "EPI - Vêtements professionnels", website: "www.equipman.fr", sector: "Commerce & Vente", avatarUrl: "", logoUrl: "" },
+            { id: 8, company: "BN AGENCEMENT", name: "Brice NISTAL", phone: "07 61 40 46 83", email: "brice@bnagencement.com", activity: "Menuisier Agenceur - Cuisine", website: "https://www.facebook.com/profile.php?id=61568381294390", sector: "Artisanat & Bâtiment", avatarUrl: "", logoUrl: "" },
+            { id: 9, company: "Abeille Assurances", name: "Yann BENOIST", phone: "07 77 25 26 12", email: "y-benoist@abeille-assurances.com", activity: "Assurances Pro et Particuliers", website: "https://agences.abeille-assurances.fr/chateaubriant/", sector: "Finance & Assurance", avatarUrl: "", logoUrl: "" },
+            { id: 10, company: "DT SÉCURITÉ PRIVÉE", name: "Edouard TRIOULAIRE", phone: "06 34 92 67 91", email: "el.trioulaire@dtsecuriteprivee.fr", activity: "Sécurité Privée", website: "www.dtsecuriteprivee.fr", sector: "Services aux entreprises", avatarUrl: "", logoUrl: "" },
+            { id: 11, company: "PROPRIÉTÉS PRIVÉES", name: "Georges Henri NOMARI", phone: "06 60 22 34 99", email: "gh.nomari@proprietes-privees.com", activity: "Expert et Conseiller en Immobilier territoire Châteaubriant Derval", website: "https://www.proprietes-privees.com/negociateur/georges-henri.nomari", sector: "Immobilier", avatarUrl: "", logoUrl: "" },
+            { id: 12, company: "STÉ AUNETTE", name: "Mickael AUNETTE", phone: "06 89 94 12 46", email: "Mickaelaunette@gmail.com", activity: "Construction métallique", website: "", sector: "Artisanat & Bâtiment", avatarUrl: "", logoUrl: "" },
+            { id: 13, company: "SO CO RE VE / COMERA CUISINES", name: "Kalita Rebours", phone: "06 71 30 39 42", email: "kalita.rebours@wanadoo.fr", activity: "Maître d’œuvre / Agencement intérieur", website: "www.SOCOREVE-chateaubriant.com", sector: "Artisanat & Bâtiment", avatarUrl: "", logoUrl: "" },
+            { id: 14, company: "STE AUNETTE", name: "Laura LEMASSON", phone: "06 87 01 09 81", email: "laura@aunette.com", activity: "Serrurerie, metallerie, cloture, portail, porte de garage", website: "", sector: "Artisanat & Bâtiment", avatarUrl: "", logoUrl: "" },
+            { id: 15, company: "CEB COURTAGE", name: "Eric BENOIST", phone: "06 20 04 18 66", email: "e-benoist@abeille-assurances.com", activity: "Courtage Assurances", website: "", sector: "Finance & Assurance", avatarUrl: "", logoUrl: "" },
+            { id: 16, company: "LA DECO’TECH", name: "Jérémy MARSAC", phone: "06 47 96 33 71", email: "sarlcojelouti@gmail.com", activity: "Peinture décoration-ravalement-pose de sol", website: "https://www.ladecotech.com/", sector: "Artisanat & Bâtiment", avatarUrl: "", logoUrl: "" },
+            { id: 17, company: "PEUGEOT GEMY CHÂTEAUBRIANT", name: "Gwenaelle BRUNEAU", phone: "07 77 44 32 12", email: "gbruneau@gemy.fr", activity: "Commerciale auprès des professionnels", website: "", sector: "Automobile & Transport", avatarUrl: "", logoUrl: "" },
+            { id: 18, company: "RÉSEAU ELISTA", name: "Isabelle LEDIG", phone: "06 75 41 30 65", email: "i.ledig@elistaconseils.com", activity: "Courtière prêts immobiliers", website: "", sector: "Finance & Assurance", avatarUrl: "", logoUrl: "" },
+            { id: 19, company: "MARIE PHOTOGRAPHE", name: "Marie GUÉRIN", phone: "06 30 68 67 79 / 02 40 81 05 70", email: "contact@mariephotographe.fr", activity: "Photographie, service et commerce", website: "www.mariephotographe.fr", sector: "Communication", avatarUrl: "", logoUrl: "" },
+            { id: 20, company: "SARL CHARNOLÉ SINGER", name: "Robin SINGER", phone: "06 32 17 77 65", email: "cjs@huissier-justice.fr", activity: "Commissaire de justice (Huissier)", website: "www.etude-cjs.com", sector: "Juridique & Conseil", avatarUrl: "", logoUrl: "" },
+            { id: 21, company: "MENUISERIE SAVOURÉ", name: "Sabrina SAVOURÉ", phone: "02 99 44 91 21 / 06 07 38 42 52", email: "menuiseriesavoure.contact@gmail.com", activity: "Menuiserie et isolation, en rénovation et neuf", website: "www.menuiseriesavoure.com", sector: "Artisanat & Bâtiment", avatarUrl: "", logoUrl: "" },
+            { id: 22, company: "BOLLORE MAINGUET", name: "Séverine MESLIN", phone: "06 74 95 29 13", email: "s.meslin@bollore-mainguet.fr", activity: "Expertise comptable", website: "www.bollore-mainguet.com", sector: "Finance & Assurance", avatarUrl: "", logoUrl: "" },
+            { id: 23, company: "PROSPACTIVE", name: "Xavier VOZELLE", phone: "07 44 92 37 60", email: "xavier.vozelle@prospactive.com", activity: "Développement commercial externalisé", website: "http://www.prospactive.com", sector: "Services aux entreprises", avatarUrl: "", logoUrl: "" },
+            { id: 24, company: "LE PETIT DIAGNOSTIQUEUR", name: "Ludovic COLIN", phone: "06 71 12 57 05", email: "contact@lepetitdiagnostiqueur.fr", activity: "Diagnostic immobilier", website: "https://www.lepetitdiagnostiqueur.fr/", sector: "Immobilier", avatarUrl: "", logoUrl: "" }
         ];
 
         // --- UTILITAIRES ---
@@ -117,14 +117,29 @@
             return url;
         };
 
+        // Secteurs prédéfinis pour faciliter la saisie
+        const PREDEFINED_SECTORS = [
+            "Artisanat & Bâtiment",
+            "Bien-être & Coaching",
+            "Communication",
+            "Commerce & Vente",
+            "Finance & Assurance",
+            "Immobilier",
+            "Juridique & Conseil",
+            "Loisirs & Sport",
+            "Services aux entreprises",
+            "Automobile & Transport",
+            "Autre"
+        ];
+
         // --- APPLICATION PRINCIPALE ---
         function App() {
             // ÉTATS FIREBASE
             const [user, setUser] = useState(null);
             const [isLoading, setIsLoading] = useState(true);
-            const [firebaseError, setFirebaseError] = useState(null); // Nouvel état pour tracer les erreurs
+            const [firebaseError, setFirebaseError] = useState(null);
 
-            // ÉTATS DONNÉES (vides par défaut, Firebase s'en occupe)
+            // ÉTATS DONNÉES
             const [contacts, setContacts] = useState([]);
             const [declarationsCA, setDeclarationsCA] = useState([]);
             
@@ -139,7 +154,17 @@
             
             // ÉTATS : Ajout membre & CA
             const [showAddModal, setShowAddModal] = useState(false);
-            const [newContact, setNewContact] = useState({ name: '', company: '', phone: '', email: '', activity: '', website: '' });
+            const [newContact, setNewContact] = useState({ 
+                name: '', 
+                company: '', 
+                phone: '', 
+                email: '', 
+                activity: '', 
+                website: '',
+                sector: 'Artisanat & Bâtiment',
+                avatarUrl: '',
+                logoUrl: ''
+            });
             const [showDeclareCAModal, setShowDeclareCAModal] = useState(false);
             const [showManageCAModal, setShowManageCAModal] = useState(false);
             const [caAmount, setCaAmount] = useState('');
@@ -219,7 +244,8 @@
                     return (
                         contact.name.toLowerCase().includes(searchLower) ||
                         contact.company.toLowerCase().includes(searchLower) ||
-                        contact.activity.toLowerCase().includes(searchLower)
+                        (contact.activity && contact.activity.toLowerCase().includes(searchLower)) ||
+                        (contact.sector && contact.sector.toLowerCase().includes(searchLower))
                     );
                 });
             }, [contacts, searchTerm]);
@@ -259,7 +285,17 @@
                 try {
                     await setDoc(doc(db, 'artifacts', canvasAppId, 'public', 'data', 'contacts', newId), contactToAdd);
                     setShowAddModal(false);
-                    setNewContact({ name: '', company: '', phone: '', email: '', activity: '', website: '' });
+                    setNewContact({ 
+                        name: '', 
+                        company: '', 
+                        phone: '', 
+                        email: '', 
+                        activity: '', 
+                        website: '',
+                        sector: 'Artisanat & Bâtiment',
+                        avatarUrl: '',
+                        logoUrl: ''
+                    });
                 } catch(err) { alert("Erreur d'ajout. Vérifiez vos règles Firebase."); }
             };
 
@@ -293,6 +329,24 @@
                     try {
                         await deleteDoc(doc(db, 'artifacts', canvasAppId, 'public', 'data', 'ca_declarations', String(idToDelete)));
                     } catch(err) { alert("Erreur de suppression."); }
+                }
+            };
+
+            // Partage / Recommandation de membre
+            const handleShareContact = (contact) => {
+                const text = `Je te recommande chaleureusement ${contact.name} de l'entreprise ${contact.company} pour son activité de ${contact.activity}. Voici ses coordonnées : ${contact.phone || 'Non renseigné'} - ${contact.email || 'Non renseigné'}`;
+                if (navigator.share) {
+                    navigator.share({
+                        title: `Recommandation de ${contact.name}`,
+                        text: text
+                    })
+                    .then(() => console.log('Partage réussi !'))
+                    .catch((error) => console.log('Erreur de partage :', error));
+                } else {
+                    // Copie dans le presse-papier si non supporté
+                    navigator.clipboard.writeText(text)
+                        .then(() => alert("Le message de recommandation a été copié dans le presse-papier car votre navigateur ne prend pas en charge l'API de partage."))
+                        .catch(() => alert("Impossible de copier la recommandation."));
                 }
             };
 
@@ -375,7 +429,7 @@
                                 <input
                                     type="text"
                                     className="block w-full pl-10 sm:pl-11 pr-4 py-3 sm:py-4 border-0 rounded-xl sm:rounded-2xl text-slate-900 ring-1 ring-inset ring-slate-200 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm sm:text-lg bg-transparent transition-all outline-none placeholder:text-slate-400 m-0"
-                                    placeholder="Nom, entreprise, activité..."
+                                    placeholder="Nom, entreprise, activité, secteur..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                 />
@@ -405,16 +459,44 @@
                                                 <i className="fa-solid fa-trash pointer-events-none"></i>
                                             </button>
                                         )}
-                                        <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-5">
-                                            <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br ${getAvatarGradient(contact.name)} flex items-center justify-center text-white shadow-inner flex-shrink-0`}>
-                                                {getContactIcon(contact.activity, "text-lg sm:text-xl")}
+                                        
+                                        {/* Logo élégant de l'entreprise s'il existe */}
+                                        {contact.logoUrl && (
+                                            <div className="absolute top-4 right-4 w-12 h-6 flex items-center justify-center bg-slate-50 border border-slate-100 rounded px-1 z-0 overflow-hidden">
+                                                <img src={contact.logoUrl} alt="Logo" className="max-h-full max-w-full object-contain" />
                                             </div>
+                                        )}
+                                        
+                                        <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-5">
+                                            {/* Photo de profil ou icône par défaut */}
+                                            {contact.avatarUrl ? (
+                                                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-indigo-100 overflow-hidden flex-shrink-0 shadow-inner">
+                                                    <img src={contact.avatarUrl} alt={contact.name} className="w-full h-full object-cover" />
+                                                </div>
+                                            ) : (
+                                                <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br ${getAvatarGradient(contact.name)} flex items-center justify-center text-white shadow-inner flex-shrink-0`}>
+                                                    {getContactIcon(contact.activity, "text-lg sm:text-xl")}
+                                                </div>
+                                            )}
+                                            
                                             <div className="flex-1 min-w-0 pr-6">
                                                 <h3 className="text-base sm:text-lg font-bold text-slate-900 truncate m-0">{contact.name}</h3>
                                                 <p className="text-xs sm:text-sm font-semibold text-indigo-600 truncate m-0 mt-1">{contact.company}</p>
                                             </div>
                                         </div>
+                                        
                                         <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 flex-grow mb-3 sm:mb-4 leading-relaxed mt-0">{contact.activity}</p>
+                                        
+                                        {/* Badge de Secteur d'activité */}
+                                        {contact.sector && (
+                                            <div className="mb-4">
+                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100">
+                                                    <i className="fa-solid fa-tag mr-1 text-[10px]"></i>
+                                                    {contact.sector}
+                                                </span>
+                                            </div>
+                                        )}
+                                        
                                         <div className="mt-auto pt-3 sm:pt-4 border-t border-slate-50 flex items-center justify-between text-slate-400 group-hover:text-indigo-600 transition-colors">
                                             <span className="text-xs sm:text-sm font-medium">Voir le contact</span>
                                             <i className="fa-solid fa-chevron-right text-xs sm:text-sm"></i>
@@ -439,16 +521,53 @@
                                     </div>
                                     <div className="px-5 sm:px-8 pb-6 sm:pb-8 pt-0 relative">
                                         <div className="flex justify-center -mt-12 sm:-mt-16 mb-3 sm:mb-4 relative z-10">
-                                            <div className={`w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br ${getAvatarGradient(selectedContact.name)} flex items-center justify-center text-white border-4 border-white shadow-lg`}>
-                                                {getContactIcon(selectedContact.activity, "text-3xl sm:text-5xl")}
-                                            </div>
+                                            {/* Photo de profil ou icône par défaut */}
+                                            {selectedContact.avatarUrl ? (
+                                                <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white">
+                                                    <img src={selectedContact.avatarUrl} alt={selectedContact.name} className="w-full h-full object-cover" />
+                                                </div>
+                                            ) : (
+                                                <div className={`w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br ${getAvatarGradient(selectedContact.name)} flex items-center justify-center text-white border-4 border-white shadow-lg`}>
+                                                    {getContactIcon(selectedContact.activity, "text-3xl sm:text-5xl")}
+                                                </div>
+                                            )}
                                         </div>
+                                        
+                                        {/* Logo de l'entreprise s'il existe */}
+                                        {selectedContact.logoUrl && (
+                                            <div className="flex justify-center mb-3">
+                                                <div className="h-10 flex items-center bg-slate-50 border border-slate-100 rounded px-2 overflow-hidden max-w-[200px]">
+                                                    <img src={selectedContact.logoUrl} alt="Logo" className="max-h-full max-w-full object-contain" />
+                                                </div>
+                                            </div>
+                                        )}
+                                        
                                         <div className="text-center mb-6 sm:mb-8">
                                             <h2 className="text-xl sm:text-2xl font-bold text-slate-900 m-0 break-words">{selectedContact.name}</h2>
                                             <h3 className="text-base sm:text-lg font-medium text-indigo-600 mt-1 mb-0 break-words">{selectedContact.company}</h3>
+                                            
+                                            {selectedContact.sector && (
+                                                <div className="mt-2">
+                                                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100">
+                                                        <i className="fa-solid fa-tag mr-1"></i>
+                                                        {selectedContact.sector}
+                                                    </span>
+                                                </div>
+                                            )}
+                                            
                                             <p className="text-slate-500 mt-2 sm:mt-3 bg-slate-50 inline-block px-3 py-1 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-xs sm:text-sm border border-slate-100 mb-0">{selectedContact.activity}</p>
                                         </div>
+                                        
                                         <div className="space-y-3 sm:space-y-4">
+                                            {/* Bouton de recommandation (navigator.share) */}
+                                            <button 
+                                                onClick={() => handleShareContact(selectedContact)} 
+                                                className="w-full flex items-center justify-center p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition-all border-none cursor-pointer shadow-sm active:scale-[0.98]"
+                                            >
+                                                <i className="fa-solid fa-share-nodes mr-2"></i>
+                                                Recommander ce membre
+                                            </button>
+                                            
                                             {selectedContact.phone && (
                                                 <a href={`tel:${selectedContact.phone.replace(/\s/g, '').split('/')[0]}`} className="flex items-center p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 hover:bg-indigo-50 border border-slate-100 hover:border-indigo-100 transition-colors group no-underline">
                                                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center shadow-sm text-indigo-600 group-hover:scale-110 transition-transform shrink-0"><i className="fa-solid fa-phone text-sm sm:text-base"></i></div>
@@ -507,9 +626,19 @@
                                                 <input required type="text" className="w-full px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none bg-slate-50 focus:bg-white m-0 text-sm sm:text-base" value={newContact.company} onChange={e => setNewContact({...newContact, company: e.target.value})} placeholder="Ex: Ma Société" />
                                             </div>
                                         </div>
-                                        <div>
-                                            <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Activité / Poste *</label>
-                                            <input required type="text" className="w-full px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none bg-slate-50 focus:bg-white m-0 text-sm sm:text-base" value={newContact.activity} onChange={e => setNewContact({...newContact, activity: e.target.value})} placeholder="Ex: Plomberie et Chauffage" />
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                                            <div>
+                                                <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Secteur d'activité *</label>
+                                                <select required className="w-full px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none bg-slate-50 focus:bg-white m-0 text-sm sm:text-base cursor-pointer" value={newContact.sector} onChange={e => setNewContact({...newContact, sector: e.target.value})}>
+                                                    {PREDEFINED_SECTORS.map(sec => (
+                                                        <option key={sec} value={sec}>{sec}</option>
+                                                    ))}
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Activité / Poste *</label>
+                                                <input required type="text" className="w-full px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none bg-slate-50 focus:bg-white m-0 text-sm sm:text-base" value={newContact.activity} onChange={e => setNewContact({...newContact, activity: e.target.value})} placeholder="Ex: Plomberie et Chauffage" />
+                                            </div>
                                         </div>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                                             <div>
@@ -524,6 +653,16 @@
                                         <div>
                                             <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">Site internet</label>
                                             <input type="text" className="w-full px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none bg-slate-50 focus:bg-white m-0 text-sm sm:text-base" value={newContact.website} onChange={e => setNewContact({...newContact, website: e.target.value})} placeholder="Ex: www.masociete.com" />
+                                        </div>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                                            <div>
+                                                <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">URL Photo de profil (avatarUrl)</label>
+                                                <input type="text" className="w-full px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none bg-slate-50 focus:bg-white m-0 text-sm sm:text-base" value={newContact.avatarUrl} onChange={e => setNewContact({...newContact, avatarUrl: e.target.value})} placeholder="Ex: https://lien-photo.jpg" />
+                                            </div>
+                                            <div>
+                                                <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">URL Logo entreprise (logoUrl)</label>
+                                                <input type="text" className="w-full px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none bg-slate-50 focus:bg-white m-0 text-sm sm:text-base" value={newContact.logoUrl} onChange={e => setNewContact({...newContact, logoUrl: e.target.value})} placeholder="Ex: https://lien-logo.png" />
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -561,49 +700,48 @@
                                         </div>
                                         <div>
                                             <label className="block text-sm font-semibold text-slate-700 mb-2">Montant du CA généré (€) *</label>
-                                            <input required type="number" min="0" step="1" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none bg-slate-50 focus:bg-white m-0 text-base font-bold text-indigo-600" value={caAmount} onChange={e => setCaAmount(e.target.value)} placeholder="Ex: 1500" />
+                                            <input required type="number" min="0" step="1" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none bg-slate-50 focus:bg-white m-0 text-base" value={caAmount} onChange={e => setCaAmount(e.target.value)} placeholder="Ex: 1500" />
                                         </div>
                                     </form>
                                 </div>
-                                <div className="px-6 py-4 border-t border-slate-100 bg-slate-50 flex justify-end space-x-3">
-                                    <button type="button" onClick={() => setShowDeclareCAModal(false)} className="px-5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-200 transition-colors border-none cursor-pointer">Annuler</button>
-                                    <button type="submit" form="declareCAForm" className="px-5 py-2.5 rounded-xl font-medium text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-all border-none cursor-pointer">Valider le CA</button>
+                                <div className="px-5 py-4 border-t border-slate-100 bg-slate-50 flex justify-end space-x-3">
+                                    <button type="button" onClick={() => setShowDeclareCAModal(false)} className="px-5 py-2.5 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-200 transition-colors border-none cursor-pointer">Annuler</button>
+                                    <button type="submit" form="declareCAForm" className="px-5 py-2.5 rounded-xl text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm hover:shadow transition-all border-none cursor-pointer">Confirmer la déclaration</button>
                                 </div>
                             </div>
                         </div>
                     )}
 
-                    {/* Modal Gérer les CA (Admin uniquement) */}
+                    {/* Modal Gestion des déclarations CA (Admin uniquement) */}
                     {showManageCAModal && isAdmin && (
                         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm" onClick={() => setShowManageCAModal(false)} style={{margin:0}}>
-                            <div className="bg-white rounded-2xl sm:rounded-3xl w-full max-w-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] m-0" onClick={e => e.stopPropagation()}>
-                                <div className="px-5 py-5 border-b border-slate-100 flex justify-between items-center bg-slate-50 shrink-0">
+                            <div className="bg-white rounded-2xl sm:rounded-3xl w-full max-w-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col m-0" onClick={e => e.stopPropagation()}>
+                                <div className="px-5 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50 shrink-0">
                                     <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2 m-0">
-                                        <i className="fa-solid fa-list-check text-indigo-600"></i> Historique des CA
+                                        <i className="fa-solid fa-list-check text-indigo-600"></i> Historique du CA du réseau
                                     </h3>
                                     <button onClick={() => setShowManageCAModal(false)} className="text-slate-400 hover:text-slate-600 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-sm border-none cursor-pointer">
                                         <i className="fa-solid fa-xmark"></i>
                                     </button>
                                 </div>
-                                <div className="p-0 overflow-y-auto flex-1">
-                                    <ul className="divide-y divide-slate-100 m-0 p-0 list-none">
-                                        {declarationsCA.length === 0 ? (
-                                            <li className="text-center text-slate-500 py-10 m-0 text-base">Aucun CA n'a été déclaré pour le moment.</li>
-                                        ) : (
-                                            declarationsCA.map(decl => (
-                                                <li key={decl.firebaseId || decl.id} className="py-4 px-6 flex justify-between items-center hover:bg-slate-50 transition-colors m-0">
+                                <div className="p-6 overflow-y-auto flex-1">
+                                    {declarationsCA.length === 0 ? (
+                                        <p className="text-center text-slate-500 py-8 m-0">Aucune déclaration enregistrée.</p>
+                                    ) : (
+                                        <div className="space-y-3">
+                                            {declarationsCA.map(decl => (
+                                                <div key={decl.firebaseId || decl.id} className="flex justify-between items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
                                                     <div>
-                                                        <p className="text-base sm:text-lg font-extrabold text-indigo-600 m-0">{Number(decl.amount).toLocaleString('fr-FR')} €</p>
-                                                        <p className="text-sm text-slate-600 font-medium m-0 mt-1">{decl.memberName}</p>
-                                                        <p className="text-xs text-slate-400 m-0 mt-0.5">Déclaré le {decl.date}</p>
+                                                        <p className="font-bold text-slate-900 m-0 text-sm sm:text-base">{decl.amount.toLocaleString('fr-FR')} €</p>
+                                                        <p className="text-xs text-slate-500 m-0 mt-1">Par: {decl.memberName} • {decl.date}</p>
                                                     </div>
-                                                    <button onClick={(e) => handleDeleteCA(decl.firebaseId || decl.id, e)} className="p-3 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors border-none bg-transparent cursor-pointer" title="Supprimer cette déclaration">
-                                                        <i className="fa-solid fa-trash text-lg pointer-events-none"></i>
+                                                    <button onClick={(e) => handleDeleteCA(decl.firebaseId || decl.id, e)} className="p-2 text-slate-300 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors border-none bg-transparent cursor-pointer" title="Supprimer">
+                                                        <i className="fa-solid fa-trash"></i>
                                                     </button>
-                                                </li>
-                                            ))
-                                        )}
-                                    </ul>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -612,23 +750,20 @@
                     {/* Modal Login Admin */}
                     {showLoginModal && (
                         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm" onClick={() => setShowLoginModal(false)} style={{margin:0}}>
-                            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 w-full max-w-sm shadow-2xl m-0" onClick={e => e.stopPropagation()}>
-                                <div className="flex justify-between items-center mb-5 sm:mb-6">
-                                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 m-0">Accès Gestionnaire</h3>
-                                    <button onClick={() => setShowLoginModal(false)} className="text-slate-400 hover:text-slate-600 border-none bg-transparent cursor-pointer p-0">
-                                        <i className="fa-solid fa-xmark text-lg sm:text-xl"></i>
-                                    </button>
+                            <div className="bg-white rounded-2xl w-full max-w-sm shadow-2xl overflow-hidden m-0" onClick={e => e.stopPropagation()}>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-slate-900 mb-4 m-0 text-center">Gestion de l'annuaire</h3>
+                                    <form onSubmit={handleLogin} className="space-y-4 m-0">
+                                        <div>
+                                            <label className="block text-sm font-semibold text-slate-700 mb-2">Mot de passe de gestion</label>
+                                            <input required type="password" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none m-0 text-base" value={loginPassword} onChange={e => setLoginPassword(e.target.value)} placeholder="Saisir le mot de passe..." />
+                                            {loginError && <p className="text-red-500 text-xs mt-2 m-0 font-medium">Mot de passe incorrect</p>}
+                                        </div>
+                                        <button type="submit" className="w-full py-3 bg-slate-800 text-white rounded-xl font-bold hover:bg-slate-900 transition-colors border-none cursor-pointer text-base shadow-sm">
+                                            Se connecter
+                                        </button>
+                                    </form>
                                 </div>
-                                <form onSubmit={handleLogin} className="m-0">
-                                    <div className="mb-5 sm:mb-6">
-                                        <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-2">Mot de passe</label>
-                                        <input type="password" autoFocus className="w-full px-3 py-2.5 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-600 outline-none m-0 text-sm sm:text-base" value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} placeholder="Saisissez le mot de passe" />
-                                        {loginError && <p className="text-red-500 text-xs sm:text-sm mt-2 mb-0">Mot de passe incorrect. (Indice: admin)</p>}
-                                    </div>
-                                    <button type="submit" className="w-full bg-indigo-600 text-white font-medium py-2.5 sm:py-3 rounded-lg sm:rounded-xl hover:bg-indigo-700 active:scale-95 border-none cursor-pointer text-sm sm:text-base">
-                                        Se connecter
-                                    </button>
-                                </form>
                             </div>
                         </div>
                     )}
